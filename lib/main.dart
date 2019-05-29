@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+import 'Login.dart';
+
+//enum Login {
+//  Email,
+//  GOOGLE,
+//  Facebook,
+//  Github,
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -12,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 //      debugShowCheckedModeBanner: false,
-      home: MyHomePage(title: '모바일 콘텐츠'),
+      home: LoginPage(),
     );
   }
 }
@@ -25,11 +33,6 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-//enum Login {
-//  Email,
-//  GOOGLE,
-//  Facebook,
-//  Github,
 //}
 
 class _MyHomePageState extends State<MyHomePage> {

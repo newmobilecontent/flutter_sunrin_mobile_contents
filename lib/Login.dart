@@ -9,45 +9,34 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPage extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
-  TextEditingController _email, password = TextEditingController();
-  String getEmail;
+  String getEmail, getPassWord;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('로그인'),
-      ),
-      body: Container(
-        alignment: Alignment(20, 20),
-        child: Column(
-          children: <Widget>[
-            Form(
+    return Material(
+      child: Column(
+        children: <Widget>[
+          SizedBox(
+            width: 350,
+            height: 100,
+
+            child: Form(
               key: _formKey,
               child: ListView(
-                padding: EdgeInsets.symmetric(horizontal: 22.0),
                 children: <Widget>[
-                  SizedBox(
-                    height: kToolbarHeight,
-                  ),
-                  TextField(                    // 이미엘
-                    controller: _email,
+                  TextField(
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
-                      border: OutlineInputBorder(),
                       icon: Icon(GroovinMaterialIcons.github_box),
-                      labelText: '깃허브 계정',
+                      labelText: '깃허브 이메일',
                     ),
-                    onChanged: (i) {
-                      getEmail = i;
-                    },
-                  ),
-
-                  // 비번
+                    onChanged: (i) => getEmail = i,
+                  )
                 ],
               ),
             ),
-            RaisedButton(
+          ),
+          RaisedButton(
               child: Text('확인'),
               color: Colors.blue,
               onPressed: () {
@@ -55,11 +44,10 @@ class _LoginPage extends State<LoginPage> {
                   Fluttertoast.showToast(msg: '이메일이 아닙니다.');
                 }
                 Fluttertoast.showToast(msg: '$getEmail');
-              },
-            )
-          ],
-        ),
-      )
+              }
+          )
+        ],
+      ),
     );
   }
 }

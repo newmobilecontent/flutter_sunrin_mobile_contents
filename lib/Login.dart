@@ -18,6 +18,7 @@ class _LoginPage extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(                                                // all
+      resizeToAvoidBottomPadding: false,
       body: Container(                                              // 화면 위치 설정
         decoration: BoxDecoration(
           gradient: LinearGradient(

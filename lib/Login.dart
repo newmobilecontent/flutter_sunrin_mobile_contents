@@ -18,16 +18,30 @@ class _LoginPage extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(                                                // all
-      backgroundColor: Colors.cyanAccent,
       body: Container(                                              // 화면 위치 설정
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              colors: [Colors.cyanAccent, Colors.red]
+          )
+        ),
         padding: EdgeInsets.all(50.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            Icon(
-              GroovinMaterialIcons.sigma,
-              color: Colors.deepPurple,
-              size: 110,
+            Column(
+              children: <Widget>[
+                Icon(
+                  GroovinMaterialIcons.sigma,
+                  color: Colors.deepPurple,
+                  size: 110,
+                ),
+                Text(
+                  '개발자들을 위한 앱',
+                  style: TextStyle(
+                    fontSize: 15,
+                  ),
+                )
+              ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -58,13 +72,13 @@ class _LoginPage extends State<LoginPage> {
                 FloatingActionButton(
                   backgroundColor: Colors.grey,
                   child: Icon(GroovinMaterialIcons.github_face),
-                  onPressed: () => Fluttertoast.showToast(msg: 'login'),
+                  onPressed: () => Fluttertoast.showToast(msg: 'github'),
                 ),
 
                 FloatingActionButton(
                   child: Icon(GroovinMaterialIcons.google),
                   backgroundColor: Colors.black,
-                  onPressed: null,
+                  onPressed: () => Fluttertoast.showToast(msg: 'google'),
                 )
               ],
             )

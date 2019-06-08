@@ -17,64 +17,59 @@ class _LoginPage extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(                                        // bottom을 확인 버튼
-      body: Container(
-        padding: EdgeInsets.all(40.0),
+    return Scaffold(                                                // all
+      backgroundColor: Colors.cyanAccent,
+      body: Container(                                              // 화면 위치 설정
+        padding: EdgeInsets.all(50.0),
         child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            TextField(
-                keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
-                  icon: Icon(GroovinMaterialIcons.github_face),
-                  labelText: '깃허브 이메일',
-                ),
-                onChanged: (i) => getEmail = i
+            Icon(
+              GroovinMaterialIcons.sigma,
+              color: Colors.deepPurple,
+              size: 110,
             ),
-            TextField(
-                keyboardType: TextInputType.text,
-                decoration: InputDecoration(
-                  icon: Icon(GroovinMaterialIcons.lock),
-                  labelText: '깃허브 비번',
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                TextField(
+                  keyboardType: TextInputType.text,
+                  decoration: InputDecoration(
+                    icon: Icon(Icons.email),
+                    labelText: '이메일',
+                  ),
+                  onChanged: (i) => getEmail = i,
                 ),
-                onChanged: (i) => getPassWord = i,
-              obscureText: true,
+                TextField(
+                  keyboardType: TextInputType.text,
+                  decoration: InputDecoration(
+                    icon: Icon(GroovinMaterialIcons.lock),
+                    labelText: '비밀번호',
+                  ),
+                  onChanged: (i) => getPassWord = i,
+                  obscureText: true,
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(GroovinMaterialIcons.github_face),
-        onPressed: () {
-          Fluttertoast.showToast(msg: '$getEmail: $getPassWord');
-        },
-      ),
-      bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        notchMargin: 10.0,
-        color: Colors.blue,
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            IconButton(icon: Icon(Icons.menu), onPressed: () => AlertDialog(
-              title: Text('Menu'),
-              content: Text('Study'),
-              actions: <Widget>[
-                Row(
-                  children: <Widget>[
-                    ButtonBar(
 
-                    )
-                  ],
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FloatingActionButton(
+                  backgroundColor: Colors.grey,
+                  child: Icon(GroovinMaterialIcons.github_face),
+                  onPressed: () => Fluttertoast.showToast(msg: 'login'),
+                ),
+
+                FloatingActionButton(
+                  child: Icon(GroovinMaterialIcons.google),
+                  backgroundColor: Colors.black,
+                  onPressed: null,
                 )
               ],
-            )),
-            IconButton(icon: Icon(Icons.search), onPressed: () => Fluttertoast.showToast(msg: 'search'))
+            )
           ],
-        ),
+        )
       ),
     );
   }

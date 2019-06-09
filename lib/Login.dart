@@ -31,41 +31,64 @@ class _LoginPage extends State<LoginPage> {
           children: <Widget>[
             Column(
               children: <Widget>[
-                Icon(
-                  GroovinMaterialIcons.sigma,
-                  color: Colors.deepPurple,
-                  size: 110,
+                SizedBox(
+                  width: 140.0,
+                  height: 140.0,
+                  child: Card(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                    color: Colors.deepOrangeAccent,
+                    elevation: 35.0,
+                    child: Icon(
+                      GroovinMaterialIcons.sigma,
+                      color: Colors.deepPurple,size: 100,
+                    ),
+                  ),
                 ),
                 Text(
-                  '개발자들을 위한 앱',
+                  '개발자를 위한 앱',
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 16,
                   ),
                 )
               ],
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                TextField(
-                  keyboardType: TextInputType.text,
-                  decoration: InputDecoration(
-                    icon: Icon(Icons.email),
-                    labelText: '이메일',
+
+
+            SizedBox(
+              height: 170,
+              width: 900,
+              child: Card(
+                elevation: 30.0,
+                color: Colors.white70,
+                shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                child: Container(
+                  padding: EdgeInsets.all(20.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      TextField(
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          icon: Icon(Icons.email),
+                          labelText: '이메일',
+                        ),
+                        onChanged: (i) => getEmail = i,
+                      ),
+                      TextField(
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          icon: Icon(GroovinMaterialIcons.lock),
+                          labelText: '비밀번호',
+                        ),
+                        onChanged: (i) => getPassWord = i,
+                        obscureText: true,
+                      ),
+                    ],
                   ),
-                  onChanged: (i) => getEmail = i,
                 ),
-                TextField(
-                  keyboardType: TextInputType.text,
-                  decoration: InputDecoration(
-                    icon: Icon(GroovinMaterialIcons.lock),
-                    labelText: '비밀번호',
-                  ),
-                  onChanged: (i) => getPassWord = i,
-                  obscureText: true,
-                ),
-              ],
+              ),
             ),
+
 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -88,4 +111,8 @@ class _LoginPage extends State<LoginPage> {
       ),
     );
   }
+
+//    bool LoginTest() {                  // 입력한 이메일과 비번이 일치한지 확인
+//
+//    }
 }

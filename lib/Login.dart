@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:groovin_material_icons/groovin_material_icons.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'all_page/main_page.dart';
 
 /// @Autor Lansional
 ///     로그인 화면
@@ -13,7 +14,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPage extends State<LoginPage> {
-  String getEmail, getPassWord;
+  String getEmail, getPassWord;                                     // getEmail: 사용자가 입력한 이메일 정보, getPassWord: 사용자가 입력한 비밀번호 정보
 
   @override
   Widget build(BuildContext context) {
@@ -32,22 +33,22 @@ class _LoginPage extends State<LoginPage> {
             Column(
               children: <Widget>[
                 SizedBox(
-                  width: 140.0,
-                  height: 140.0,
+                  width: 120,
+                  height: 120,
                   child: Card(
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
                     color: Colors.deepOrangeAccent,
                     elevation: 35.0,
                     child: Icon(
                       GroovinMaterialIcons.sigma,
-                      color: Colors.deepPurple,size: 100,
+                      color: Colors.deepPurple,size: 90,
                     ),
                   ),
                 ),
                 Text(
                   '개발자를 위한 앱',
                   style: TextStyle(
-                    fontSize: 16,
+                    fontSize: 15,
                   ),
                 )
               ],
@@ -89,20 +90,25 @@ class _LoginPage extends State<LoginPage> {
               ),
             ),
 
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
+//                FloatingActionButton(
+//                  backgroundColor: Colors.grey,
+//                  child: Icon(GroovinMaterialIcons.github_face),
+//                  onPressed: () => Fluttertoast.showToast(msg: 'github'),
+//                ),
+//
+//                FloatingActionButton(
+//                  child: Icon(GroovinMaterialIcons.google),
+//                  backgroundColor: Colors.black,
+//                  onPressed: () => Fluttertoast.showToast(msg: 'google'),
+//                )
                 FloatingActionButton(
-                  backgroundColor: Colors.grey,
-                  child: Icon(GroovinMaterialIcons.github_face),
-                  onPressed: () => Fluttertoast.showToast(msg: 'github'),
-                ),
-
-                FloatingActionButton(
-                  child: Icon(GroovinMaterialIcons.google),
-                  backgroundColor: Colors.black,
-                  onPressed: () => Fluttertoast.showToast(msg: 'google'),
+                  child: Icon(Icons.assignment_turned_in),
+                  onPressed: () {
+                    Navigator.of(context).pushAndRemoveUntil(new MaterialPageRoute(builder: (context) => MenuPage()), (route) => route == null);
+                  }
                 )
               ],
             )

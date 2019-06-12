@@ -19,16 +19,22 @@ class _LoginPage extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(                                                // all
-      resizeToAvoidBottomPadding: false,
       body: Container(                                              // 화면 위치 설정
         decoration: BoxDecoration(
           gradient: LinearGradient(
               colors: [Colors.cyanAccent, Colors.red]
           )
         ),
-        padding: EdgeInsets.all(50.0),
+        padding: EdgeInsets.all(40.0),
+//        padding: EdgeInsets.only(
+//          top: 40,
+//          bottom: 200,
+//          left: 50,
+//          right: 50
+//        ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
           children: <Widget>[
             Column(
               children: <Widget>[
@@ -41,57 +47,45 @@ class _LoginPage extends State<LoginPage> {
                     elevation: 35.0,
                     child: Icon(
                       GroovinMaterialIcons.sigma,
-                      color: Colors.deepPurple,size: 90,
+                      color: Colors.deepPurple,
+                      size: 90,
                     ),
                   ),
                 ),
                 Text(
                   '개발자를 위한 앱',
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 16,
                   ),
                 )
               ],
             ),
 
-
-            SizedBox(                                             // 로그인 입력창
-              height: 170,
-              width: 900,
-              child: Card(
-                elevation: 30.0,
-                color: Colors.white70,
-                shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                child: Container(
-                  padding: EdgeInsets.all(20.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      TextField(
-                        keyboardType: TextInputType.text,
-                        decoration: InputDecoration(
-                          icon: Icon(Icons.email),
-                          labelText: '이메일',
-                        ),
-                        onChanged: (i) => getEmail = i,
-                      ),
-                      TextField(
-                        keyboardType: TextInputType.text,
-                        decoration: InputDecoration(
-                          icon: Icon(GroovinMaterialIcons.lock),
-                          labelText: '비밀번호',
-                        ),
-                        onChanged: (i) => getPassWord = i,
-                        obscureText: true,
-                      ),
-                    ],
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                TextField(
+                  keyboardType: TextInputType.text,
+                  decoration: InputDecoration(
+                    icon: Icon(Icons.email),
+                    labelText: '이메일',
                   ),
+                  onChanged: (i) => getEmail = i,
                 ),
-              ),
+                TextField(
+                  keyboardType: TextInputType.text,
+                  decoration: InputDecoration(
+                    icon: Icon(GroovinMaterialIcons.lock),
+                    labelText: '비밀번호',
+                  ),
+                  onChanged: (i) => getPassWord = i,
+                  obscureText: true,
+                ),
+              ],
             ),
 
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 // 깃허브 와 구글 로그인 버튼
 //                FloatingActionButton(
@@ -105,13 +99,13 @@ class _LoginPage extends State<LoginPage> {
 //                  onPressed: () => Fluttertoast.showToast(msg: 'google'),
 //                ),
                 FloatingActionButton(                             // 디버그 모드 버튼
-                  child: Icon(Icons.assignment_turned_in),
-                  onPressed: () {
-                    Navigator.of(context).pushAndRemoveUntil(new MaterialPageRoute(builder: (context) => MenuPage()), (route) => route == null);
-                  }
+                    child: Icon(Icons.assignment_turned_in),
+                    onPressed: () {
+                      Navigator.of(context).pushAndRemoveUntil(new MaterialPageRoute(builder: (context) => MenuPage()), (route) => route == null);
+                    }
                 )
               ],
-            )
+            ),
           ],
         )
       ),

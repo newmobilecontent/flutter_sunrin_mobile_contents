@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:groovin_material_icons/groovin_material_icons.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+//import 'package:fluttertoast/fluttertoast.dart';
 import 'all_page/main_page.dart';
 
 /// @Autor Lansional
@@ -55,7 +55,7 @@ class _LoginPage extends State<LoginPage> {
             ),
 
 
-            SizedBox(
+            SizedBox(                                             // 로그인 입력창
               height: 170,
               width: 900,
               child: Card(
@@ -93,18 +93,18 @@ class _LoginPage extends State<LoginPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
+                // 깃허브 와 구글 로그인 버튼
 //                FloatingActionButton(
 //                  backgroundColor: Colors.grey,
 //                  child: Icon(GroovinMaterialIcons.github_face),
 //                  onPressed: () => Fluttertoast.showToast(msg: 'github'),
 //                ),
-//
 //                FloatingActionButton(
 //                  child: Icon(GroovinMaterialIcons.google),
 //                  backgroundColor: Colors.black,
 //                  onPressed: () => Fluttertoast.showToast(msg: 'google'),
-//                )
-                FloatingActionButton(
+//                ),
+                FloatingActionButton(                             // 디버그 모드 버튼
                   child: Icon(Icons.assignment_turned_in),
                   onPressed: () {
                     Navigator.of(context).pushAndRemoveUntil(new MaterialPageRoute(builder: (context) => MenuPage()), (route) => route == null);

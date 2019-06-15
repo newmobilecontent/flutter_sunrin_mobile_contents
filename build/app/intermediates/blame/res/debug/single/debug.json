@@ -48,6 +48,10 @@
         "source": "/home/jacky/.gradle/caches/transforms-2/files-2.1/5b39e71a956f9bd1664fb147319f4657/res/color/common_google_signin_btn_tint.xml"
     },
     {
+        "merged": "/home/jacky/문서/AndroidStudioProjects/flutter_sunrin_mobile_contents/build/app/intermediates/res/merged/debug/drawable-watch-v20_common_google_signin_btn_text_dark_normal.xml.flat",
+        "source": "/home/jacky/.gradle/caches/transforms-2/files-2.1/b8ea99ef095a8396169bfd492acb9a8f/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
         "merged": "/home/jacky/문서/AndroidStudioProjects/flutter_sunrin_mobile_contents/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
         "source": "/home/jacky/.gradle/caches/transforms-2/files-2.1/5b39e71a956f9bd1664fb147319f4657/res/drawable-hdpi-v4/common_google_signin_btn_text_dark_normal_background.9.png"
     },
@@ -208,6 +212,10 @@
         "source": "/home/jacky/.gradle/caches/transforms-2/files-2.1/5b39e71a956f9bd1664fb147319f4657/res/drawable/common_google_signin_btn_icon_light_normal.xml"
     },
     {
+        "merged": "/home/jacky/문서/AndroidStudioProjects/flutter_sunrin_mobile_contents/build/app/intermediates/res/merged/debug/drawable-watch-v20_common_google_signin_btn_text_disabled.xml.flat",
+        "source": "/home/jacky/.gradle/caches/transforms-2/files-2.1/b8ea99ef095a8396169bfd492acb9a8f/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
+    },
+    {
         "merged": "/home/jacky/문서/AndroidStudioProjects/flutter_sunrin_mobile_contents/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
         "source": "/home/jacky/.gradle/caches/transforms-2/files-2.1/5b39e71a956f9bd1664fb147319f4657/res/drawable-hdpi-v4/common_google_signin_btn_text_light_normal_background.9.png"
     },
@@ -282,6 +290,10 @@
     {
         "merged": "/home/jacky/문서/AndroidStudioProjects/flutter_sunrin_mobile_contents/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "/home/jacky/.gradle/caches/transforms-2/files-2.1/15a04257c4666f2e4d103abfff2e8b20/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/home/jacky/문서/AndroidStudioProjects/flutter_sunrin_mobile_contents/build/app/intermediates/res/merged/debug/drawable-watch-v20_common_google_signin_btn_text_light_normal.xml.flat",
+        "source": "/home/jacky/.gradle/caches/transforms-2/files-2.1/b8ea99ef095a8396169bfd492acb9a8f/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
     },
     {
         "merged": "/home/jacky/문서/AndroidStudioProjects/flutter_sunrin_mobile_contents/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",

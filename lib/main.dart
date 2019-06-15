@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'all_page/main_page.dart';
 import 'Login.dart';
 
 void main() => runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 //      debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: MenuPage(),
     );
   }
 }

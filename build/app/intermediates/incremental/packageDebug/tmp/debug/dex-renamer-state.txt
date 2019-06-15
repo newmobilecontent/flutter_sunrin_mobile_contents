@@ -1,4 +1,10 @@
-#Sat Jun 15 18:14:28 KST 2019
-base.0=/home/jacky/문서/AndroidStudioProjects/flutter_sunrin_mobile_contents/build/app/intermediates/transforms/dexMerger/debug/0
+#Sun Jun 16 00:27:27 KST 2019
+path.2=classes3.dex
+path.1=classes2.dex
 path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
+base.2=/home/jacky/문서/AndroidStudioProjects/flutter_sunrin_mobile_contents/build/app/intermediates/transforms/dexMerger/debug/0
+base.1=/home/jacky/문서/AndroidStudioProjects/flutter_sunrin_mobile_contents/build/app/intermediates/transforms/dexMerger/debug/0
+base.0=/home/jacky/문서/AndroidStudioProjects/flutter_sunrin_mobile_contents/build/app/intermediates/transforms/dexMerger/debug/0

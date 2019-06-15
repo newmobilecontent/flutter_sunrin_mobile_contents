@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:groovin_material_icons/groovin_material_icons.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 //import 'package:fluttertoast/fluttertoast.dart';
+
 import 'all_page/main_page.dart';
+import 'utils/analytics.dart';
 
 /// @Autor Lansional
 ///     로그인 화면
@@ -61,31 +64,31 @@ class _LoginPage extends State<LoginPage> {
               ],
             ),
 
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                TextField(
-                  keyboardType: TextInputType.text,
-                  decoration: InputDecoration(
-                    icon: Icon(Icons.email),
-                    labelText: '이메일',
-                  ),
-                  onChanged: (i) => getEmail = i,
-                ),
-                TextField(
-                  keyboardType: TextInputType.text,
-                  decoration: InputDecoration(
-                    icon: Icon(GroovinMaterialIcons.lock),
-                    labelText: '비밀번호',
-                  ),
-                  onChanged: (i) => getPassWord = i,
-                  obscureText: true,
-                ),
-              ],
-            ),
+//            Column(
+//              mainAxisAlignment: MainAxisAlignment.center,
+//              children: <Widget>[
+//                TextField(
+//                  keyboardType: TextInputType.text,
+//                  decoration: InputDecoration(
+//                    icon: Icon(Icons.email),
+//                    labelText: '이메일',
+//                  ),
+//                  onChanged: (i) => getEmail = i,
+//                ),
+//                TextField(
+//                  keyboardType: TextInputType.text,
+//                  decoration: InputDecoration(
+//                    icon: Icon(GroovinMaterialIcons.lock),
+//                    labelText: '비밀번호',
+//                  ),
+//                  onChanged: (i) => getPassWord = i,
+//                  obscureText: true,
+//                ),
+//              ],
+//            ),
 
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 // 깃허브 와 구글 로그인 버튼
 //                FloatingActionButton(
@@ -93,17 +96,22 @@ class _LoginPage extends State<LoginPage> {
 //                  child: Icon(GroovinMaterialIcons.github_face),
 //                  onPressed: () => Fluttertoast.showToast(msg: 'github'),
 //                ),
-//                FloatingActionButton(
-//                  child: Icon(GroovinMaterialIcons.google),
-//                  backgroundColor: Colors.black,
-//                  onPressed: () => Fluttertoast.showToast(msg: 'google'),
-//                ),
-                FloatingActionButton(                             // 디버그 모드 버튼
-                    child: Icon(Icons.assignment_turned_in),
-                    onPressed: () {
-                      Navigator.of(context).pushAndRemoveUntil(new MaterialPageRoute(builder: (context) => MenuPage()), (route) => route == null);
-                    }
-                )
+                FloatingActionButton(
+                  child: Icon(GroovinMaterialIcons.google),
+                  backgroundColor: Colors.black,
+                  onPressed: () {
+                    AuthService().googleSignIn()
+                        .then((FirebaseUser user) => print(user))
+                        .catchError((e) => print(e));
+                    MenuPage();
+                  },
+                ),
+//                FloatingActionButton(                             // 디버그 모드 버튼
+//                    child: Icon(Icons.assignment_turned_in),
+//                    onPressed: () {
+//                      Navigator.of(context).pushAndRemoveUntil(new MaterialPageRoute(builder: (context) => MenuPage()), (route) => route == null);
+//                    }
+//                )
               ],
             ),
           ],
@@ -111,8 +119,7 @@ class _LoginPage extends State<LoginPage> {
       ),
     );
   }
+  bool LoginTest() {                  // 입력한 이메일과 비번이 일치한지 확인
 
-//    bool LoginTest() {                  // 입력한 이메일과 비번이 일치한지 확인
-//
-//    }
+  }
 }

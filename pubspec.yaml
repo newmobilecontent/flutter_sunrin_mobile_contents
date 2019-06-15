@@ -19,6 +19,8 @@ environment:
 dependencies:
   groovin_material_icons:  ^1.1.6
   fluttertoast: ^3.1.0
+  firebase_core: ^0.2.5       # This dependency was added during initial configuration.
+  firebase_analytics: ^1.0.4  # add dependency for Google Analytics for Firebase
   flutter:
     sdk: flutter
 

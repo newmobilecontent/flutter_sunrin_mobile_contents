@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1062544417690",
+    "firebase_url": "https://sunrincontentproject.firebaseio.com",
+    "project_id": "sunrincontentproject",
+    "storage_bucket": "sunrincontentproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062544417690:android:81bcec43a21a66ef",
+        "android_client_info": {
+          "package_name": "com.lansional.flutter_sunrin_mobile_contents"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062544417690-mtq5bu9v1ea8qc46fnvpl9tljrtud30g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDctzC-FLxPyaTcSq7fw2xgHEozgyC4D44"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062544417690-mtq5bu9v1ea8qc46fnvpl9tljrtud30g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
